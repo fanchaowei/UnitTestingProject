@@ -1,14 +1,21 @@
-<script setup lang="ts">
-  import { ref } from 'vue'
+<script lang="ts">
+  import { ref, defineComponent } from 'vue'
+  import TodoList from './TodoList.vue'
+  import { useTodoStore } from '../store/todo'
+  export default defineComponent({
+    name: 'HelloWrorld',
+  })
+</script>
 
+<script setup lang="ts">
   defineProps<{ msg: string }>()
+  const todoStore = useTodoStore()
 
   const count = ref(0)
-
   const inputVal = ref('')
 
   const handleAddTodo = () => {
-    console.log('add todo', inputVal.value)
+    todoStore.addTodo(inputVal.value)
   }
 </script>
 
@@ -26,6 +33,9 @@
       type="text"
       placeholder=""
     ></n-input>
+  </div>
+  <div class="card">
+    <TodoList />
   </div>
 </template>
 
