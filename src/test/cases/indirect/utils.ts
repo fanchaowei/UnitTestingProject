@@ -5,3 +5,7 @@ export function userAge() {
 export function fetchUserAge() {
   return Promise.resolve(18)
 }
+
+export function getInnerHeight() {
+  return innerHeight
+}
