@@ -18,7 +18,7 @@ describe('promise', () => {
   it('promise 的 then 多层嵌套', async () => {
     const view = new View()
     await view.render()
-    // await flushPromises()
+    await flushPromises()
     // await setTimeout(() => {})  // flush-promises 本质上就是执行了一个 setTimeout
     expect(view.count).toBe(3)
   })
