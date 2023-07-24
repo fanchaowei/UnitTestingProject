@@ -7,6 +7,8 @@ export default defineConfig({
   test: {
     // 你可以在这里配置你的测试统一执行的文件
     setupFiles: ['./vitest.setup.ts'],
+    // 你可以在这里配置你的测试环境
+    environment: 'happy-dom',
   },
   plugins: [vue()],
   resolve: {

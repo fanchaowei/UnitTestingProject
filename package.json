@@ -19,6 +19,7 @@
     "@vitejs/plugin-vue": "^4.1.0",
     "@vitest/ui": "^0.32.0",
     "flush-promises": "^1.0.2",
+    "happy-dom": "^10.5.2",
     "msw": "^1.2.2",
     "naive-ui": "^2.34.4",
     "typescript": "^5.0.2",
